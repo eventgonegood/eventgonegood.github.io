@@ -1,0 +1,10 @@
+---
+layout:     post
+title:      "The CrossFit Modeling Problem"
+subtitle:   "How do you model exercise?"
+date:       2015-06-01 12:00:00
+author:     "Dru Sellers"
+header-img: "img/post-bg-01.jpg"
+---
+
+hello

@@ -1,0 +1,9 @@
+---
+require:
+- jekyll-compass
+project_path: "/Users/drusellers/dev/egg/blog"
+http_path: "/"
+css_dir: styles
+sass_dir: _sass
+images_dir: images
+javascripts_dir: scripts
