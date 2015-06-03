@@ -7,4 +7,27 @@ author:     "Dru Sellers"
 header-img: "img/post-bg-01.jpg"
 ---
 
-hello
+#Hello there. :)
+
+Welcome to my latest adventure. I'm a software developer that also enjoys the sport of fitness (
+aka [CrossFit](http://www.crossfit.com)). As a curious person by nature, I will often think about how I would [model some business](http://www.enterpriseintegrationpatterns.com/ramblings/18_starbucks.html)
+or interaction in my life in software. I wondered what it would look like to model a workout,
+how do you structure it, how do you organize it, especially a sport that is as young as CrossFit is.
+
+A few years ago I tipped my toes in trying to model the domain and immediately found it interesting.
+I had certain preconceived notions about how things would work or not work and as usual in a new domain,
+I was wrong. I started to have new and vibrant discussions with my coach about how he thought about X
+or Y. This has become a fun past time with them, as I am not in any rush to understand so I'm able
+to really explore the domain. But since it was just a curiosity, I eventually lost interest and moved
+on.
+
+Fast forward to today. I am still interested in the domain, and I have a desire to learn something new.
+As a competitor in the sport I am interested in how scoring is done. The [games.crossfit.com](http://games.crossfit.com) website seems to come to a screeching halt during the open, which lead me to wonder if I could (with a simulated load) do better with regards to accepting updates and showing those updates. Given I am a greenfield application, I imagine I could, but its still fun.
+
+Another recent trend is that I've had a lot of fun following a friend of mine as he pursues VC funding for a company of his, combine that with a desire to learn how to build a system on an operating system that isn't windows and a desire to get back to writing and we arrive at my current project. **Event Gone Good** is my new home for
+writing and coding in ways that are fun again, and allow me to share some thoughts on programming without
+having to resort to some contrived model. At this point I'm hoping to do this all in the open, so
+that I can share my lessons as I go and see if in doing so I can't drive even more learning for
+myself.
+
+Welcome to the start of my journey!
