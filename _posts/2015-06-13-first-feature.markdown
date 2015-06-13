@@ -2,10 +2,9 @@
 layout:     post
 title:      "What to build first?"
 subtitle:   "Argh"
-date:       2015-06-08 12:00:00
+date:       2015-06-13 12:00:00
 author:     "Dru Sellers"
 header-img: "img/post-bg-firstmmf.jpg"
-published:  false
 ---
 
 #Where do you start?
