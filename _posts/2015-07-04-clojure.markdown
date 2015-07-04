@@ -1,0 +1,31 @@
+---
+layout:     post
+title:      "Why Clojure?"
+subtitle:   "Isn't that a huge papercut?"
+date:       2015-07-04 12:00:00
+author:     "Dru Sellers"
+header-img: "img/post-bg-clojure.jpg"
+published:  true
+---
+
+#So, why didn't you use .Net?
+
+The bottom line is I need to get some experience outside of .Net. Writing code in .Net has become comfortably predictable for me and I need something that will shake me up and make me think about things. After looking at many languages I settled on Clojure. I'm fascinated by the syntax of the language and the language author Rich Hickey has some very interesting talks on how to build better software. Moving off of .Net to a language that has such a drastically different type system such as Clojure has revealed to me how much I depend on and leverage the .Net type system and all of its meta-data. I'm still struggling with the loss of it when I program in Clojure but things are slowly getting better. 
+
+I have also had to struggle with how to organize my code. I'm typically a little namespace heavy with my C# and while Clojure embraces small namespaces I've struggled with grouping my code. In C# I have Assemblies (a project), Namespaces (aka Folders), Classes (a file) and inside those Classes we have Methods. In Clojure I have Jars (a project), Namespaces (the path to the file!) and Functions. I lost a whole grouping structure and how I implement a namespace has gone from a folder to a file. YIKES! This change up has thrown me for a loop, but over time with practice and reading I have started to coalasce my thoughts into a model that seems favorable in the Clojure world. I owe a lot of thanks to the OSS community for answering my questions, putting source code out there for me to read, and all of the excellent talks on ClojureTV.
+
+Another fun thing that I had to noodle through was changing my code writing spidey senses to accept that I don't write bound methods anymore. No longer is it `bob.DoStuff()` but  `do-stuff(bob)`. Its a subtle change, and it makes all of the sense in the world once you shift your mind over to it, but at first it seems like so much noise.
+
+In addition to reading numerous OSS libraries in Clojure, I have found a few tools that have made it much easier to switch to Clojure by giving me back a bit of the things I'm missing from my statically typed C#.
+
+##Tools
+
+- [lein and lein check](https://github.com/technomancy/leiningen): dirt simple clojure project build tooling. `lein check` gives me a basic compile type check
+- [cljfmt](https://github.com/weavejester/cljfmt): Helps me keep my code pretty
+- [lein ancient](https://github.com/xsc/lein-ancient): For keeping me up-to-date
+- [Prismatic's Schema](https://github.com/Prismatic/schema): a soft kind of type checking - there is a lot in this library but right now its mostly helping me with my sanity. 
+- [core](https://github.com/clojure/core.typed).[typed](http://typedclojure.org/): this is my next step to see how this can help me out
+
+##Improvement
+
+One thing that I haven't been able to solve so far is the feedback cycle of Clojure. A friend of mine has pounded into me the importance of a quick feedback loop, and the Clojure loop, niavely, is brutally slow. I really need to grok the [reloaded](http://thinkrelevance.com/blog/2013/06/04/clojure-workflow-reloaded) pattern and I need to leverage the powerful REPL in Clojure.
