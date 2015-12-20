@@ -4,7 +4,7 @@ title:      "Notes on Duct Configuration"
 subtitle:   "So I don't forget"
 date:       2015-12-20 12:00:00
 author:     "Dru Sellers"
-header-img: "img/post-bg-component.jpg"
+header-img: "img/post-bg-duct.jpg"
 published:  true
 ---
 
