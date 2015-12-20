@@ -10,11 +10,16 @@ published:  true
 
 #What is Component?
 
-[Component](https://github.com/stuartsierra/component) is a clojure library by [Stuart Sierra](http://stuartsierra.com/) that provides a way to construct a _system_ written in clojure.
+[Component](https://github.com/stuartsierra/component) is a clojure library by
+[Stuart Sierra](http://stuartsierra.com/) that provides a way to construct a
+_system_ written in clojure.
 
 #Breaking down the setup
 
-Ok, so here is an example of an old application being built using the Component library. My goal here is to break it down so that I can remember just what the heck is going on. My C# brain tends to have a hard time when I come back to this given the lack of types.
+Ok, so here is an example of an old application being built using the Component
+library. My goal here is to break it down so that I can remember just what the
+heck is going on. My C# brain tends to have a hard time when I come back to
+this given the lack of types.
 
 {% highlight clojure linenos %}
 (defn example-system [config-options]
@@ -50,7 +55,9 @@ aob
 
 {% endhighlight %}
 
-Ok, so this is the beginning and what its doing is taking in the passed in argument `config-options` and using _destructuring_ to pick out each key and binding it to a variable for easy access.
+Ok, so this is the beginning and what its doing is taking in the passed in
+argument `config-options` and using _destructuring_ to pick out each key and
+binding it to a variable for easy access.
 
 {% highlight clojure linenos %}
 
@@ -58,7 +65,10 @@ Ok, so this is the beginning and what its doing is taking in the passed in argum
 
 {% endhighlight %}
 
-Neo4j is a low level component that stands on its own, we call the constructor function that we created and pass in its configuration data. *THERE IS NO MAGIC HERE, YET.* This is just calling a function which will return a record (a fancy hash) that has the configuration data all passed in.
+Neo4j is a low level component that stands on its own, we call the constructor
+function that we created and pass in its configuration data. *THERE IS NO MAGIC
+HERE, YET.* This is just calling a function which will return a record (a fancy
+hash) that has the configuration data all passed in.
 
 {% highlight clojure linenos %}
 
@@ -68,7 +78,9 @@ Neo4j is a low level component that stands on its own, we call the constructor f
 
 {% endhighlight %}
 
-Ok, this one is saying that my component `:comp` is build by calling `(endpoint-component r/login-endpoint)` and then its dependencies are bound via the:
+Ok, this one is saying that my component `:comp` is build by calling
+`(endpoint-component r/login-endpoint)` and then its dependencies are bound via
+the:
 
 {% highlight clojure linenos %}
 :comp (component/using      
@@ -76,7 +88,11 @@ Ok, this one is saying that my component `:comp` is build by calling `(endpoint-
 	{:id :identities})
 {% endhighlight %}
 
-So, the `using` function is going to look at the record and bind the instance named `:identities` in the system map to the key `id` in the component. Ok, I take that back - this one is "special" because I'm using `duct`s [`endpoint-component`](https://github.com/weavejester/duct/wiki/Components). So what this is doing is in the method that you get to build you endpoint
+So, the `using` function is going to look at the record and bind the instance
+named `:identities` in the system map to the key `id` in the component. Ok, I
+take that back - this one is "special" because I'm using `duct`s
+[`endpoint-component`](https://github.com/weavejester/duct/wiki/Components). So
+what this is doing is in the method that you get to build you endpoint
 
 {% highlight clojure linenos %}
 (defn login-endpoint [config]
@@ -85,11 +101,13 @@ So, the `using` function is going to look at the record and bind the instance na
       (io/resource "app/endpoint/login/form.html"))))
 {% endhighlight %}
 
-Here as said above you will find that in `config` there is a key named `id` that will have the values of `identity` from the system map.
+Here as said above you will find that in `config` there is a key named `id`
+that will have the values of `identity` from the system map.
 
 ##Update
 
-I learned there is a much more sane way to organize this stuff, so using the same example above you can *MUCH* better express it as:
+I learned there is a much more sane way to organize this stuff, so using the
+same example above you can *MUCH* better express it as:
 
 {% highlight clojure linenos %}
 
